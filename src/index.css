@@ -1,1 +1,42 @@
 @import "tailwindcss";
+
+:root {
+  --black: #252525;
+  --white: #d9d9d9;
+  --green: #d0f333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "VT323", sans-serif;
+  font-weight: 500;
+}
+
+html {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 300px));
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.card-img {
+  padding: 10px;
+  background-color: white;
+  height: 500px;
+}
