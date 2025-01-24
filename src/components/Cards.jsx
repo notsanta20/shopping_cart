@@ -9,17 +9,15 @@ export default function Cards({ data, addToCart }) {
               item.category === `women's clothing`
             ) {
               return (
-                <div className="card" key={item.id}>
+                <div className="card text-lg" key={item.id}>
                   <div className="card-img flex items-center rounded-[10px]">
                     <img src={item.image} alt="" />
                   </div>
-                  <div className="card-title text-center text-xl flex-1">
+                  <div className="card-title text-center flex-1">
                     {item.title}
                   </div>
                   <div className="card-text flex">
-                    <div className="card-price flex-1 text-xl">
-                      {item.price}$
-                    </div>
+                    <div className="card-price flex-1">{item.price}$</div>
                     <div
                       className="add-cart w-[30px] cursor-pointer"
                       onClick={() => addToCart(item)}

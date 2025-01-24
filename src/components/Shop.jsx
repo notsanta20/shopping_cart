@@ -1,13 +1,9 @@
 import { useEffect, useState } from "react";
 import Cards from "./Cards";
 
-export default function Shop() {
+export default function Shop({ addToCart }) {
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(true);
-
-  function addToCart(item) {
-    console.log(item);
-  }
 
   useEffect(() => {
     const dataFetch = async () => {
@@ -26,10 +22,17 @@ export default function Shop() {
     dataFetch();
   }, []);
 
-  if (isLoading) return <h2>Loading</h2>;
+  if (isLoading)
+    return (
+      <>
+        <h1>SHOP</h1>
+        <h2 className="text-center text-2xl">Loading . . .</h2>
+      </>
+    );
 
   return (
     <>
+      <h1>SHOP</h1>
       <Cards data={data} addToCart={addToCart} />
     </>
   );
