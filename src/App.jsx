@@ -1,5 +1,5 @@
 import "./App.css";
-import NavBar from "./components/NavBar";
+import Menu from "./components/Menu";
 import Home from "./components/home";
 import Shop from "./components/shop";
 import Cart from "./components/Cart";
@@ -23,7 +23,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<NavBar />}>
+        <Route path="/" element={<Menu />}>
           <Route index element={<Home />} />
           <Route path="Shop" element={<Shop addToCart={addCart} />} />
           <Route

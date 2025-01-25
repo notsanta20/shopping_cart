@@ -25,12 +25,37 @@ h1 {
   text-align: center;
 }
 
-.main-container {
+.side-bar {
   position: relative;
 }
 
-.nav-bar {
+.menu {
   position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.main-container {
+  width: 200px;
+  background-color: #383838;
+  height: 100vh;
+  transform: translateX(-500px);
+  transition: all 0.3s ease-out;
+}
+
+.animation {
+  transform: translateX(0px);
+}
+
+.close-menu {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.nav-bar {
+  padding: 10px;
 }
 
 .card-container {
