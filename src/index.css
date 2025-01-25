@@ -20,7 +20,7 @@ html {
 }
 
 h1 {
-  font-family: "VT323";
+  font-family: "Libre Barcode 128";
   font-size: 4rem;
   text-align: center;
 }
@@ -56,6 +56,56 @@ h1 {
 
 .nav-bar {
   padding: 10px;
+}
+.home-container {
+  position: relative;
+}
+
+.txt-rotate-1 {
+  writing-mode: vertical-rl;
+  font-family: "VT323";
+}
+
+.txt-rotate-2 {
+  writing-mode: vertical-rl;
+  font-family: "VT323";
+  transform: rotate(180deg);
+}
+
+.home-img {
+  border-left: 10px solid var(--green);
+  border-right: 10px solid var(--green);
+}
+
+.stripe-1 {
+  color: var(--black);
+  background-color: var(--white);
+  padding: 5px 0px;
+  position: absolute;
+  top: 40px;
+  transform: rotateZ(-7deg);
+}
+.stripe-2 {
+  color: var(--black);
+  background-color: var(--white);
+  padding: 5px 0px;
+  position: absolute;
+  top: 350px;
+  transform: rotateZ(10deg);
+}
+
+.stripe-txt {
+  border-top: 2px solid var(--black);
+  border-bottom: 2px solid var(--black);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-overflow: clip;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.street-txt {
+  font-weight: 900;
 }
 
 .card-container {
