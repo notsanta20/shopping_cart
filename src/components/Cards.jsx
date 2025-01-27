@@ -1,8 +1,10 @@
-export default function Cards({ data, addToCart }) {
+import { useState } from "react";
+
+export default function Cards({ itemData, addToCart }) {
   return (
     <>
       <div className="card-container">
-        {data.map((item) => {
+        {itemData.map((item) => {
           if (item.id > 1) {
             if (
               item.category === `men's clothing` ||

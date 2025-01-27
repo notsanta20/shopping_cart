@@ -3,6 +3,7 @@ import Cards from "./Cards";
 
 export default function Shop({ addToCart }) {
   const [data, setData] = useState(null);
+  const [stat, setStat] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -33,7 +34,7 @@ export default function Shop({ addToCart }) {
   return (
     <>
       <h1>SHOP</h1>
-      <Cards data={data} addToCart={addToCart} />
+      <Cards itemData={data} addToCart={addToCart} />
     </>
   );
 }

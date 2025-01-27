@@ -4,9 +4,15 @@ export default function NavBar() {
   return (
     <>
       <nav className="main-container">
-        <Link to={"/"}>Home</Link>
-        <Link to={"/Shop"}>Shop</Link>
-        <Link to={"/Cart"}>cart</Link>
+        <Link className="menu-link" to={"/"}>
+          Home
+        </Link>
+        <Link className="menu-link" to={"/Shop"}>
+          Shop
+        </Link>
+        <Link className="menu-link" to={"/Cart"}>
+          cart
+        </Link>
       </nav>
     </>
   );

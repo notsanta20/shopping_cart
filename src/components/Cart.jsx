@@ -1,7 +1,9 @@
 import { Link } from "react-router";
+import { format } from "date-fns";
 
 export default function Cart({ items, removeItem }) {
   let sum = items.reduce((prev, { price }) => prev + price, 0);
+  const date = format(new Date(), `MMM dd, yyyy`);
   sum = Math.round((sum + Number.EPSILON) * 100) / 100;
   if (items.length === 0)
     return (
@@ -44,14 +46,14 @@ export default function Cart({ items, removeItem }) {
           <div className="invoice-header text-2xl">
             <div className="text-center">Invoice</div>
             <div>ORDER #0069</div>
-            <div>DATE</div>
+            <div>{date}</div>
           </div>
           <div className="invoice-main flex-1">
             <div className="invoice-cart text-xl">
               {items.map((i) => {
                 return (
                   <>
-                    <div className="invoice-item flex">
+                    <div className="invoice-item flex gap-5">
                       <div className="flex-1">{i.title}</div>
                       <div>{i.price}$</div>
                     </div>
