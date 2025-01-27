@@ -26,7 +26,7 @@ export default function Menu() {
 
   return (
     <>
-      <div className="cont flex">
+      <div className="cont">
         <div className="side-bar">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -41,6 +41,11 @@ export default function Menu() {
         <div className="pages flex-1">
           <Outlet />
         </div>
+        <footer className="flex justify-center items-center">
+          <a href="" target="_blank">
+            GITHUB
+          </a>
+        </footer>
       </div>
     </>
   );

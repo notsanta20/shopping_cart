@@ -160,7 +160,7 @@ h1 {
 
 .slider {
   --width: 200px;
-  --heigth: 450px;
+  --heigth: 320px;
   --quanity: 8;
   width: 80vw;
   height: var(--heigth);
@@ -197,10 +197,46 @@ h1 {
 
 @keyframes autoRun {
   0% {
-    left: 100%;
+    left: calc(var(--width) * -1);
   }
   100% {
-    left: calc(var(--width) * -1);
+    left: 100%;
+  }
+}
+
+.scroll {
+  overflow: hidden;
+  width: 100vw;
+}
+
+.scroll-list {
+  white-space: nowrap;
+  display: flex;
+  gap: 10px;
+  padding: 5px 0px;
+  background-color: var(--white);
+}
+
+.scroll-list div {
+  display: flex;
+  gap: 10px;
+}
+
+.scroll-txt p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--black);
+  border-top: 2px solid var(--black);
+  border-bottom: 2px solid var(--black);
+}
+
+.scroll-txt {
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  100% {
+    transform: translateX(calc(-100% - 10px));
   }
 }
 
@@ -279,6 +315,12 @@ h1 {
 
 .bar-code {
   font-family: "Libre Barcode 128";
+}
+
+/* FOOTER */
+footer {
+  background-color: #383838;
+  height: 50px;
 }
 
 @media (max-width: 799px) {

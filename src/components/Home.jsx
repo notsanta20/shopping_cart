@@ -46,7 +46,7 @@ export default function Home() {
           <div className="shop-btn-2">&lt;</div>
           <div className="shop-btn-1">&lt;</div>
         </Link>
-        <section className="flex flex-col gap-20">
+        <section className="flex flex-col items-center gap-20">
           <div className="pop-txt">POPULAR GOODS</div>
           <div className="slider">
             <div className="list">
@@ -73,6 +73,20 @@ export default function Home() {
               </div>
               <div className="item" style={{ "--position": 8 }}>
                 <img src="../src/assets/images/8.png" />
+              </div>
+            </div>
+          </div>
+          <div className="scroll">
+            <div className="scroll-list">
+              <div class="scroll-txt">
+                <p>BEST SELLER - STREET FASHION - WINTER SEASON</p>
+                <p>BEST SELLER - STREET FASHION - WINTER SEASON</p>
+                <p>BEST SELLER - STREET FASHION - WINTER SEASON</p>
+              </div>
+              <div class="scroll-txt">
+                <p>BEST SELLER - STREET FASHION - WINTER SEASON</p>
+                <p>BEST SELLER - STREET FASHION - WINTER SEASON</p>
+                <p>BEST SELLER - STREET FASHION - WINTER SEASON</p>
               </div>
             </div>
           </div>
