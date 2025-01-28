@@ -13,7 +13,14 @@ function App() {
 
   function addCart(data) {
     let tempData = [...cart];
-    tempData.push(data);
+    if (tempData.length > 0) {
+      const contains = tempData.filter((item) => item.title === data.title);
+      if (contains.length === 0) {
+        tempData.push(data);
+      }
+    } else {
+      tempData.push(data);
+    }
     setCart(tempData);
     cartCount.classList.add(`cart-count-anim`);
   }

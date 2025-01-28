@@ -3,7 +3,6 @@ import Cards from "./Cards";
 
 export default function Shop({ addToCart }) {
   const [data, setData] = useState(null);
-  const [stat, setStat] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {

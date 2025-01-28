@@ -239,6 +239,18 @@ h1 {
 .shop-now-btn {
   margin-bottom: 10%;
   transition: scale 0.2s;
+  animation: show-now-anim 0.5s;
+}
+
+@keyframes show-now-anim {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 .shop-now-btn:hover {
@@ -263,6 +275,18 @@ h1 {
   font-family: "VT323";
   font-size: 3rem;
   text-align: center;
+  animation: pop-anim 0.3s;
+}
+
+@keyframes pop-anim {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .slider {
@@ -273,6 +297,20 @@ h1 {
   height: var(--heigth);
   overflow: hidden;
   mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+  animation: slider-anim 0.5s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+
+@keyframes slider-anim {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .list {
@@ -363,6 +401,8 @@ h1 {
   background-color: var(--white);
   color: var(--black);
   animation: cardAnim 0.5s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 @keyframes cardAnim {
@@ -472,8 +512,22 @@ h1 {
   .side-bar svg {
     width: 35px;
   }
+
+  .stripe-1 {
+    top: 50px;
+  }
+
+  .stripe-2 {
+    top: 375px;
+  }
+
   .shop-now-btn {
     gap: 5px;
+  }
+
+  .pop-txt {
+    animation-timeline: view();
+    animation-range: entry 0% cover 10%;
   }
 
   .card-container {
