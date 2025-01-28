@@ -30,8 +30,29 @@ h1 {
   position: relative;
 }
 
-.menu-icon {
+.cart-count {
+  position: absolute;
   background-color: var(--white);
+  color: var(--black);
+  font-size: 0.9rem;
+  padding: 3px 10px;
+  border-radius: 50px;
+  left: 50px;
+  opacity: 0;
+  transform: scale(0);
+  transition-property: transform opacity;
+  transition-duration: 0.3s;
+  transition-behavior: allow-discrete;
+}
+
+.cart-count-anim {
+  opacity: 1;
+  transform: scale(1);
+
+  @starting-state {
+    opacity: 0;
+    transform: scale(0);
+  }
 }
 
 .menu {
@@ -41,6 +62,21 @@ h1 {
   position: absolute;
   left: 10px;
   top: 10px;
+  transform: rotate(0deg);
+  transition: transform 0.3s allow-discrete;
+}
+
+.menu-anim {
+  transform: rotate(360deg);
+}
+
+@keyframes menuRotate {
+  0% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .main-container {
@@ -51,10 +87,27 @@ h1 {
   width: 150px;
   background-color: #383838;
   font-size: 1.2rem;
-  display: none;
   flex-direction: column;
   padding: 10px;
   z-index: 1;
+  transform-origin: top;
+  display: none;
+  transform: scaleY(0);
+  opacity: 0;
+  transition-property: display transform opacity;
+  transition-duration: 0.3s;
+  transition-behavior: allow-discrete;
+}
+
+.main-anim {
+  display: flex;
+  opacity: 1;
+  transform: scaleY(1);
+
+  @starting-style {
+    opacity: 0;
+    transform: scaleY(0);
+  }
 }
 
 .menu-link:hover {
@@ -159,8 +212,8 @@ h1 {
 }
 
 .slider {
-  --width: 200px;
-  --heigth: 320px;
+  --width: 350px;
+  --heigth: 350px;
   --quanity: 8;
   width: 80vw;
   height: var(--heigth);
@@ -263,6 +316,14 @@ h1 {
   height: 500px;
 }
 
+.add-cart {
+  transition: transform 0.2s ease-in;
+}
+
+.add-cart:hover {
+  transform: scale(1.2);
+}
+
 /* CART PAGE */
 .cart-container {
   display: grid;
@@ -315,12 +376,6 @@ h1 {
 
 .bar-code {
   font-family: "Libre Barcode 128";
-}
-
-/* FOOTER */
-footer {
-  background-color: #383838;
-  height: 50px;
 }
 
 @media (max-width: 799px) {

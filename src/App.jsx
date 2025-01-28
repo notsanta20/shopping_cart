@@ -8,22 +8,26 @@ import { useState } from "react";
 
 function App() {
   const [cart, setCart] = useState([]);
+  const cartCount = document.querySelector(`.cart-count`);
+  const count = cart.length;
 
   function addCart(data) {
     let tempData = [...cart];
     tempData.push(data);
     setCart(tempData);
+    cartCount.classList.add(`cart-count-anim`);
   }
 
   function removeCart(data) {
     let tempData = cart.filter((item) => item.id !== data.id);
     setCart(tempData);
+    if (cart.length === 1) cartCount.classList.remove(`cart-count-anim`);
   }
 
   return (
     <>
       <Routes>
-        <Route path="/" element={<Menu />}>
+        <Route path="/" element={<Menu count={count} />}>
           <Route index element={<Home />} />
           <Route path="Shop" element={<Shop addToCart={addCart} />} />
           <Route

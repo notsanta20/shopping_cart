@@ -9,17 +9,17 @@ export default function Home() {
           <div className="top flex">
             <div className="txt-rotate-1">BEST SELLER - W/S SEASON</div>
             <div className="home-img w-[300px]">
-              <img src="../src/assets/images/home.png" />
+              <img src="../images/home.png" />
             </div>
             <div className="txt-rotate-2">BEST SELLER - W/S SEASON</div>
           </div>
           <div className="stripe stripe-1">
             <div className="stripe-txt">
+              WINTER SEASON - BEST SELLER - STREET FASHION - WINTER SEASON -
               BEST SELLER - STREET FASHION - WINTER SEASON - BEST SELLER -
               STREET FASHION - WINTER SEASON - BEST SELLER - STREET FASHION -
               WINTER SEASON - BEST SELLER - STREET FASHION - WINTER SEASON -
-              BEST SELLER - STREET FASHION - WINTER SEASON - BEST SELLER -
-              STREET FASHION - WINTER SEASON
+              BEST SELLER - STREET FASHION
             </div>
           </div>
           <div className="stripe stripe-2">
@@ -51,28 +51,28 @@ export default function Home() {
           <div className="slider">
             <div className="list">
               <div className="item" style={{ "--position": 1 }}>
-                <img src="../src/assets/images/1.png" />
+                <img src="../images/1.png" />
               </div>
               <div className="item" style={{ "--position": 2 }}>
-                <img src="../src/assets/images/2.png" />
+                <img src="../images/2.png" />
               </div>
               <div className="item" style={{ "--position": 3 }}>
-                <img src="../src/assets/images/3.png" />
+                <img src="../images/3.png" />
               </div>
               <div className="item" style={{ "--position": 4 }}>
-                <img src="../src/assets/images/4.png" />
+                <img src="../images/4.png" />
               </div>
               <div className="item" style={{ "--position": 5 }}>
-                <img src="../src/assets/images/5.png" />
+                <img src="../images/5.png" />
               </div>
               <div className="item" style={{ "--position": 6 }}>
-                <img src="../src/assets/images/6.png" />
+                <img src="../images/6.png" />
               </div>
               <div className="item" style={{ "--position": 7 }}>
-                <img src="../src/assets/images/7.png" />
+                <img src="../images/7.png" />
               </div>
               <div className="item" style={{ "--position": 8 }}>
-                <img src="../src/assets/images/8.png" />
+                <img src="../images/8.png" />
               </div>
             </div>
           </div>
