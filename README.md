@@ -27,5 +27,3 @@
 - Inspiration by <a href="https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart" target="_blank">The Odin Project</a>
 
 - <a href="https://fakestoreapi.com/" target="_blank">Fake store API</a>
-
-- <a href="https://github.com/Remix-Design/RemixIcon" target="_blank">Icons</a>
