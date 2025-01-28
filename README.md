@@ -1,8 +1,31 @@
-# React + Vite
+<h3 align="center">Shopping Cart</h3>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  <p align="center">
+    Simple Shopping Cart react app with functionality to add items to Cart.  
+    <br />
+    <a href="" target="_blank">Live Demo</a>
+  </p>
+</div>
+<br>
 
-Currently, two official plugins are available:
+<!-- ABOUT THE PROJECT -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Preview
+
+<div align="center">
+ <img src="./src/assets/preview.png">
+</div>
+
+### Built With
+
+[![My Skills](https://skillicons.dev/icons?i=js,react,html,css,tailwind,vite,figma)](https://skillicons.dev)
+
+<!-- ACKNOWLEDGMENTS -->
+
+## Acknowledgments
+
+- Inspiration by <a href="https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart" target="_blank">The Odin Project</a>
+
+- <a href="https://fakestoreapi.com/" target="_blank">Fake store API</a>
+
+- <a href="https://github.com/Remix-Design/RemixIcon" target="_blank">Icons</a>

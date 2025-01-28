@@ -8,27 +8,58 @@ import { useState } from "react";
 
 function App() {
   const [cart, setCart] = useState([]);
-  const cartCount = document.querySelector(`.cart-count`);
   const count = cart.length;
 
   function addCart(data) {
     let tempData = [...cart];
+    let newData = data;
+    newData.size = 1;
     if (tempData.length > 0) {
       const contains = tempData.filter((item) => item.title === data.title);
       if (contains.length === 0) {
-        tempData.push(data);
+        tempData.push(newData);
       }
     } else {
-      tempData.push(data);
+      tempData.push(newData);
     }
     setCart(tempData);
-    cartCount.classList.add(`cart-count-anim`);
   }
 
   function removeCart(data) {
     let tempData = cart.filter((item) => item.id !== data.id);
     setCart(tempData);
-    if (cart.length === 1) cartCount.classList.remove(`cart-count-anim`);
+  }
+
+  function decSize(item) {
+    let tempSize = item.size;
+    tempSize--;
+    if (tempSize === 0) {
+      removeCart(item);
+    } else {
+      setCart(
+        cart.map((i) => {
+          if (i.title === item.title) {
+            return { ...i, size: tempSize };
+          } else {
+            return i;
+          }
+        })
+      );
+    }
+  }
+
+  function incSize(item) {
+    let tempSize = item.size;
+    tempSize++;
+    setCart(
+      cart.map((i) => {
+        if (i.title === item.title) {
+          return { ...i, size: tempSize };
+        } else {
+          return i;
+        }
+      })
+    );
   }
 
   return (
@@ -36,7 +67,17 @@ function App() {
       <Routes>
         <Route path="/" element={<Menu count={count} />}>
           <Route index element={<Home />} />
-          <Route path="Shop" element={<Shop addToCart={addCart} />} />
+          <Route
+            path="Shop"
+            element={
+              <Shop
+                addToCart={addCart}
+                cart={cart}
+                decSize={decSize}
+                incSize={incSize}
+              />
+            }
+          />
           <Route
             path="Cart"
             element={<Cart items={cart} removeItem={removeCart} />}

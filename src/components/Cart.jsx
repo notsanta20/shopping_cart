@@ -2,16 +2,28 @@ import { Link } from "react-router";
 import { format } from "date-fns";
 
 export default function Cart({ items, removeItem }) {
-  let sum = items.reduce((prev, { price }) => prev + price, 0);
+  let sum = items.reduce((prev, i) => prev + i.size * i.price, 0);
   const date = format(new Date(), `MMM dd, yyyy`);
   sum = Math.round((sum + Number.EPSILON) * 100) / 100;
+
   if (items.length === 0)
     return (
       <div>
         <h1>CART</h1>
-        <div className="text-center">
-          <h2 className="text-2xl">No items added in Cart</h2>
-          <Link to={"/Shop"}>Shop</Link>
+        <div className="text-2xl md:text-4xl h-screen flex flex-col justify-center items-center gap-7">
+          <h2>No items added in Cart</h2>
+          <Link
+            className="shop-now-btn text-xl md:text-2xl flex gap-3"
+            to="/Shop"
+          >
+            <div className="shop-btn-1">&gt;</div>
+            <div className="shop-btn-2">&gt;</div>
+            <div className="shop-btn-3">&gt;</div>
+            <div className="text-center">SHOP NOW</div>
+            <div className="shop-btn-3">&lt;</div>
+            <div className="shop-btn-2">&lt;</div>
+            <div className="shop-btn-1">&lt;</div>
+          </Link>
         </div>
       </div>
     );
@@ -28,6 +40,7 @@ export default function Cart({ items, removeItem }) {
                   <img src={item.image} />
                 </div>
                 <div className="cart-title flex-1">{item.title}</div>
+                <div>x {item.size}</div>
                 <div className="cart-price">{item.price} $</div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -51,11 +64,13 @@ export default function Cart({ items, removeItem }) {
           <div className="invoice-main flex-1">
             <div className="invoice-cart text-xl">
               {items.map((i) => {
+                let sum = i.size * i.price;
                 return (
                   <>
                     <div className="invoice-item flex gap-5">
                       <div className="flex-1">{i.title}</div>
-                      <div>{i.price}$</div>
+                      <div>x {i.size}</div>
+                      <div>{sum}$</div>
                     </div>
                   </>
                 );

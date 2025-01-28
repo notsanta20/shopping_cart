@@ -38,21 +38,6 @@ h1 {
   padding: 3px 10px;
   border-radius: 50px;
   left: 50px;
-  opacity: 0;
-  transform: scale(0);
-  transition-property: transform opacity;
-  transition-duration: 0.3s;
-  transition-behavior: allow-discrete;
-}
-
-.cart-count-anim {
-  opacity: 1;
-  transform: scale(1);
-
-  @starting-state {
-    opacity: 0;
-    transform: scale(0);
-  }
 }
 
 .menu {
@@ -159,10 +144,9 @@ h1 {
 }
 
 .stripe-1 {
-  top: 110px;
+  top: 40px;
   transform: rotateZ(-7deg);
   animation: stripe1-anim 0.5s;
-  transform-origin: left;
 }
 
 @keyframes stripe1-anim {
@@ -177,10 +161,9 @@ h1 {
 }
 
 .stripe-2 {
-  top: 450px;
+  top: 350px;
   transform: rotateZ(10deg);
   animation: stripe2-anim 0.5s;
-  transform-origin: right;
 }
 
 @keyframes stripe2-anim {
@@ -489,6 +472,10 @@ h1 {
   }
 }
 
+.cart-price {
+  min-width: 60px;
+}
+
 .invoice-header {
   padding: 10px;
   border-bottom: 2px dashed var(--black);
@@ -497,6 +484,11 @@ h1 {
 
 .invoice-item {
   align-items: flex-end;
+}
+
+.invoice-item div:last-child {
+  min-width: 60px;
+  text-align: right;
 }
 
 .invoice-total {
@@ -511,14 +503,6 @@ h1 {
 @media (max-width: 799px) {
   .side-bar svg {
     width: 35px;
-  }
-
-  .stripe-1 {
-    top: 50px;
-  }
-
-  .stripe-2 {
-    top: 375px;
   }
 
   .shop-now-btn {

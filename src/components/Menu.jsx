@@ -16,8 +16,13 @@ export default function Menu({ count }) {
     });
   }
 
-  revealMenu();
+  function CartCount() {
+    if (count > 0) {
+      return <div className="cart-count">{count}</div>;
+    }
+  }
 
+  revealMenu();
   return (
     <>
       <div className="cont flex flex-col">
@@ -31,7 +36,7 @@ export default function Menu({ count }) {
             <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
           </svg>
           <NavBar count={count} />
-          <div className="cart-count">{count}</div>
+          <CartCount />
         </div>
         <div className="pages flex-1">
           <Outlet />
