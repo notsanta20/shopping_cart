@@ -120,6 +120,21 @@ h1 {
   margin-bottom: 250px;
 }
 
+.top {
+  animation: top-anim 0.2s;
+}
+
+@keyframes top-anim {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
 .txt-rotate-1 {
   writing-mode: vertical-rl;
   font-family: "VT323";
@@ -144,12 +159,39 @@ h1 {
 }
 
 .stripe-1 {
-  top: 40px;
+  top: 110px;
   transform: rotateZ(-7deg);
+  animation: stripe1-anim 0.5s;
+  transform-origin: left;
 }
+
+@keyframes stripe1-anim {
+  0% {
+    transform: translate(100%) rotateZ(-7deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0%) rotateZ(-7deg);
+    opacity: 1;
+  }
+}
+
 .stripe-2 {
-  top: 350px;
+  top: 450px;
   transform: rotateZ(10deg);
+  animation: stripe2-anim 0.5s;
+  transform-origin: right;
+}
+
+@keyframes stripe2-anim {
+  0% {
+    transform: translate(-100%) rotateZ(10deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0%) rotateZ(10deg);
+    opacity: 1;
+  }
 }
 
 .stripe-txt {
@@ -166,6 +208,18 @@ h1 {
 .street-txt {
   position: absolute;
   bottom: -160px;
+  animation: street-anim 0.4s;
+}
+
+@keyframes street-anim {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 .street-solid,
@@ -308,6 +362,18 @@ h1 {
   border-radius: 10px;
   background-color: var(--white);
   color: var(--black);
+  animation: cardAnim 0.5s;
+}
+
+@keyframes cardAnim {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .card-img {
@@ -340,6 +406,18 @@ h1 {
   margin-bottom: 10px;
   max-width: 1000px;
   min-width: 600px;
+  animation: cartAnim 0.5s;
+}
+
+@keyframes cartAnim {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 .cart-img {
@@ -357,6 +435,18 @@ h1 {
   margin: 0px 10px;
   margin-bottom: 10px;
   border-radius: 10px;
+  animation: invoiceAnim 0.5s;
+}
+
+@keyframes invoiceAnim {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 .invoice-header {
