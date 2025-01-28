@@ -3,7 +3,7 @@
   <p align="center">
     Simple Shopping Cart react app with functionality to add items to Cart.  
     <br />
-    <a href="" target="_blank">Live Demo</a>
+    <a href="https://shopping-cart-kvhzms77a-santhoshs-projects-9db4bd78.vercel.app/" target="_blank">Live Demo</a>
   </p>
 </div>
 <br>
